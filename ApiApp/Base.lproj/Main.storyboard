@@ -79,15 +79,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WUc-xi-BL2">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nWy-Rd-KXO" id="KMY-yW-VEC"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bMx-jI-p80"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WUc-xi-BL2" firstAttribute="top" secondItem="bMx-jI-p80" secondAttribute="top" id="2kz-M5-bpH"/>
                             <constraint firstItem="w0Z-M2-b4D" firstAttribute="centerX" secondItem="gFM-1c-NAK" secondAttribute="centerX" id="JRl-R0-61n"/>
+                            <constraint firstItem="WUc-xi-BL2" firstAttribute="leading" secondItem="bMx-jI-p80" secondAttribute="leading" id="M9R-rx-Gyg"/>
                             <constraint firstItem="w0Z-M2-b4D" firstAttribute="centerY" secondItem="gFM-1c-NAK" secondAttribute="centerY" id="dbP-Op-izV"/>
+                            <constraint firstItem="WUc-xi-BL2" firstAttribute="top" secondItem="bMx-jI-p80" secondAttribute="top" id="gf5-9i-Zur"/>
+                            <constraint firstItem="WUc-xi-BL2" firstAttribute="trailing" secondItem="bMx-jI-p80" secondAttribute="trailing" id="tZ0-S9-Cot"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="WUc-xi-BL2" id="f9Q-a0-V1M"/>
                         <outlet property="statusLabel" destination="w0Z-M2-b4D" id="mUq-4X-lnf"/>
                         <outlet property="tableView" destination="p6P-cR-vb1" id="OXU-Dd-Qat"/>
                     </connections>
