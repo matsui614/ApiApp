@@ -50,39 +50,10 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     //ここから
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-           searchBar.resignFirstResponder()
-           updateShopArray()
-       }
+        searchBar.resignFirstResponder()
+        updateShopArray()
+    }
     //ここまで追加
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -167,6 +138,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let url = URL(string: shop.logo_image)!
         cell.logoImageView.af.setImage(withURL: url)
         cell.shopNameLabel.text = shop.name
+        cell.addressLabel.text = shop.address// 住所を表示
         
         let starImageName = shop.isFavorite ? "star.fill" : "star"
         let starImage = UIImage(systemName: starImageName)?.withRenderingMode(.alwaysOriginal)
@@ -219,6 +191,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 favoriteShop.id = shop.id
                 favoriteShop.name = shop.name
                 favoriteShop.logoImageURL = shop.logo_image
+                favoriteShop.address = shop.address // 🔹 住所を保存
                 if shop.coupon_urls.sp == "" {
                     favoriteShop.couponURL = shop.coupon_urls.pc
                 } else {

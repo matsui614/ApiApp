@@ -18,6 +18,7 @@ class FavoriteViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     var favoriteArray = try! Realm().objects(FavoriteShop.self)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +50,10 @@ class FavoriteViewController: UIViewController,UITableViewDelegate, UITableViewD
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ShopCell
            let favoriteShop = favoriteArray[indexPath.row]
            let url = URL(string: favoriteShop.logoImageURL)!
+           
            cell.logoImageView.af.setImage(withURL: url)
            cell.shopNameLabel.text = favoriteShop.name
+           cell.addressLabel.text = favoriteShop.address // 追加
 
            return cell
        }

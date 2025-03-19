@@ -10,6 +10,7 @@ import UIKit
 class ShopCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel! // 🔹 住所ラベルを追加
     @IBOutlet weak var favoriteButton: UIButton!
     
     override func awakeFromNib() {
