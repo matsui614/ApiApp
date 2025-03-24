@@ -166,10 +166,10 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal">
-                                                        <imageReference key="image" image="star" catalog="system" renderingMode="original"/>
+                                                        <imageReference key="image" image="star.fill" catalog="system" renderingMode="original"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="tapFavoriteButton:" destination="nWy-Rd-KXO" eventType="touchUpInside" id="lrn-WQ-S1W"/>
+                                                        <action selector="tapFavoriteButton:" destination="nZr-76-Zhv" eventType="touchUpInside" id="ayD-dX-wkF"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-vZ-rZn">
@@ -249,6 +249,7 @@
     </scenes>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
